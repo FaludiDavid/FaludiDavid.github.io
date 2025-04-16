@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="hu">
 <head>
   <meta charset="UTF-8">
@@ -15,10 +16,7 @@
       color: #333;
     }
     header {
-      background: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
+      display: none;
     }
     .container {
       padding: 20px;
@@ -43,10 +41,6 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Korozio Stop Kft.</h1>
-    <p>Több, mint 20 éve a rozsda eltávolítás szakértője</p>
-  </header>
 
   <div class="container">
 

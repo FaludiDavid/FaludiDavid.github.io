@@ -44,6 +44,8 @@
 
   <div class="container">
 
+  <p><em>Ez az én oldalam – Dávid :)</em></p>
+
     <section>
       <h2>Szolgáltatásaink</h2>
       <ul>

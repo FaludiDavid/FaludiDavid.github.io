@@ -281,14 +281,16 @@
 
    /* HERO SZEKCIÓ – Nagyképes nyitó rész, főcím + gombok */
     .hero {
-      height: 100vh;                                              /* Teljes képernyő magasság */
-      background-image: linear-gradient(rgba(10, 37, 64, 0.85), rgba(10, 37, 64, 0.85)), url("images/hátter.png"); /* Háttérkép sötétített átfedéssel */
-      background-size: cover;                                     /* Kép kitölti a hátteret arányosan */
-      background-position: center;                                /* Kép középre igazítva */
-      display: flex;                                              /* Flexbox az elrendezéshez */
-      align-items: center;                                        /* Tartalom függőleges középre igazítása */
-      color: var(--white);                                        /* Szöveg színe fehér */
-      text-align: center;                                         /* Középre igazított szöveg */
+      height: 100vh;
+      background-color: #ffffff;
+      background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url("images/hátter.png");
+      background-size: cover, contain;
+      background-position: center, center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      color: var(--dark);
+      text-align: center;
     }
 
     .hero-content {

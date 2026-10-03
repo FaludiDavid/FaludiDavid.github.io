@@ -1320,6 +1320,13 @@ img { max-width: 100%; }
     linear-gradient(135deg, #eef2f6 0%, #cfd7e0 45%, #e9eef3 70%, #c5cfda 100%);
   box-shadow: inset 0 -14px 20px -14px rgba(10, 37, 64, .18);
 }
+
+/* ===== Nagyobb fejléc logó (felirattal) ===== */
+.brand-logo { width: 78px; height: 78px; padding: 4px; border-radius: 16px; }
+@media (max-width: 1200px) { .brand-logo { width: 58px; height: 58px; } }
+@media (max-width: 600px)  { .brand-logo { width: 52px; height: 52px; } }
+@media (max-width: 400px)  { .brand-logo { width: 46px; height: 46px; padding: 3px; } }
+    
 </style>
   <meta name="theme-color" content="#0a2540">
   <meta property="og:type" content="website">
@@ -1335,7 +1342,7 @@ img { max-width: 100%; }
   <nav class="navbar" aria-label="Főmenü">
     <div class="container navbar-container">
       <a href="#home" class="brand" aria-label="Korozio Stop SRL – Főoldal">
-        <img class="brand-logo" src="images/logo.png" alt="">
+        <img class="brand-logo" src="images/logo.svg" alt="">
         <span class="brand-text">
           <span class="brand-name">KOROZIO <b>STOP</b> <span class="brand-badge">SRL</span></span>
           <span class="brand-sub" data-key="brand.sub">Professzionális fémfelület-tisztítás</span>

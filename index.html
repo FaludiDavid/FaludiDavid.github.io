@@ -1302,6 +1302,12 @@ img { max-width: 100%; }
 @media (max-width: 960px) {
   .fab-call { display: flex; position: fixed; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 900; width: 56px; height: 56px; align-items: center; justify-content: center; border-radius: 50%; background: var(--accent); color: #fff; font-size: 1.3rem; text-decoration: none; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
 }
+
+/* ===== Finomítás: nagyobb hero kép, középre igazított CTA gombok ===== */
+.cta .btn-row { justify-content: center; }
+@media (min-width: 961px) {
+  .hero-logo { width: 112%; max-width: none; margin: 0 -6%; max-height: 80vh; }
+}
 </style>
   <meta name="theme-color" content="#0a2540">
   <meta property="og:type" content="website">
@@ -1579,20 +1585,20 @@ img { max-width: 100%; }
     </div>
   </section>
 
-  <!-- Footer -->
+<!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div>
         <h3 data-key="footer.contact">Elérhetőségek</h3>
         <ul class="footer-list">
-          <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><a href="https://www.google.com/maps/dir//Korozio+Stop+Srl+Strada+Bradului" target="_blank" rel="noopener"><span data-key="footer.address">Székelyudvarhely, Strada Bradului</span></a></li>
+          <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><a href="https://www.google.com/maps/dir//Strada+Bradului+58,+Odorheiu+Secuiesc,+Romania" target="_blank" rel="noopener"><span data-key="footer.address">Székelyudvarhely, Strada Bradului</span></a></li>
           <li><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+40745967960">+40 745 967 960</a></li>
           <li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:koroziostop@gmail.com">koroziostop@gmail.com</a></li>
         </ul>
       </div>
       <div class="footer-map">
-        <a href="https://www.google.com/maps/dir//Korozio+Stop+Srl+Strada+Bradului" target="_blank" rel="noopener" aria-label="Megnyitás a Google Térképen" data-aria-key="footer.map"></a>
-        <iframe src="https://maps.google.com/maps?q=Korozio+Stop+Srl+Strada+Bradului&t=h&z=17&ie=UTF8&iwloc=&output=embed" title="Térkép" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="https://www.google.com/maps/dir//Strada+Bradului+58,+Odorheiu+Secuiesc,+Romania" target="_blank" rel="noopener" aria-label="Megnyitás a Google Térképen" data-aria-key="footer.map"></a>
+        <iframe src="https://maps.google.com/maps?q=Strada+Bradului+58,+Odorheiu+Secuiesc,+Romania&t=h&z=17&ie=UTF8&iwloc=&output=embed" title="Térkép" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
     <div class="copyright">

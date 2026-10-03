@@ -1308,6 +1308,18 @@ img { max-width: 100%; }
 @media (min-width: 961px) {
   .hero-logo { width: 112%; max-width: none; margin: 0 -6%; max-height: 80vh; }
 }
+/* ===== Hero: halvány csiszolt fém háttér ===== */
+.hero {
+  background-color: #dfe5ec;
+  background-image:
+    /* fényes csillanás a logó mögött */
+    radial-gradient(ellipse at 75% 40%, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 55%),
+    /* finom vízszintes csiszolási csíkok */
+    repeating-linear-gradient(0deg, rgba(255,255,255,.18) 0 1px, rgba(0,0,0,.025) 1px 2px, rgba(255,255,255,.1) 2px 4px),
+    /* acélszürke alapszín átmenet */
+    linear-gradient(135deg, #eef2f6 0%, #cfd7e0 45%, #e9eef3 70%, #c5cfda 100%);
+  box-shadow: inset 0 -14px 20px -14px rgba(10, 37, 64, .18);
+}
 </style>
   <meta name="theme-color" content="#0a2540">
   <meta property="og:type" content="website">

@@ -1346,6 +1346,19 @@ img { max-width: 100%; }
   padding: 3px 6px; border-radius: 10px;
 }
 @media (max-width: 400px) { .service-card .mini-gallery { width: 64px; height: 50px; top: 10px; right: 10px; } }
+
+/* ===== Instagram felirat a galéria alatt ===== */
+.insta-cta { text-align: center; margin-top: 2.5rem; }
+.insta-cta p { font-size: 1.1rem; color: var(--dark); margin-bottom: 1rem; }
+.insta-btn {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: .8rem 1.6rem; border: 2px solid var(--primary); border-radius: 4px;
+  color: var(--primary); font-weight: 600; text-decoration: none;
+  transition: background-color .25s ease, color .25s ease;
+}
+.insta-btn i { font-size: 1.3rem; color: #e1306c; transition: color .25s ease; }
+.insta-btn:hover { background-color: var(--primary); color: #fff; }
+.insta-btn:hover i { color: #fff; }
 </style>
   <meta name="theme-color" content="#0a2540">
   <meta property="og:type" content="website">
@@ -1619,6 +1632,13 @@ img { max-width: 100%; }
           <span class="gallery-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></span>
         </button>
       </div>
+      <div class="insta-cta">
+        <p data-key="gallery.instagram.text">További tartalmakért tekintse meg Instagram oldalunkat is!</p>
+        <a href="https://www.instagram.com/koroziostop/" class="insta-btn" target="_blank" rel="noopener">
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+          <span data-key="gallery.instagram.button">Kövessen minket Instagramon</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -1763,6 +1783,8 @@ img { max-width: 100%; }
       
       // Footer
       'brand.sub': 'Professzionális fémfelület-tisztítás',
+      'gallery.instagram.text': 'További tartalmakért tekintse meg Instagram oldalunkat is!',
+      'gallery.instagram.button': 'Kövessen minket Instagramon',
       'footer.contact': 'Elérhetőségek',
       'footer.address': 'Székelyudvarhely, Strada Bradului',
       'footer.map': 'Megnyitás a Google Térképen',
@@ -1836,6 +1858,8 @@ img { max-width: 100%; }
       
       // Footer
       'brand.sub': 'Curățare profesională a suprafețelor metalice',
+      'gallery.instagram.text': 'Pentru mai multe conținuturi, vizitați și pagina noastră de Instagram!',
+      'gallery.instagram.button': 'Urmăriți-ne pe Instagram',
       'footer.contact': 'Date de contact',
       'footer.address': 'Odorheiu Secuiesc, Strada Bradului',
       'footer.map': 'Deschide în Google Maps',

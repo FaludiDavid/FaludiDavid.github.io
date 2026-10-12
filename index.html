@@ -1325,7 +1325,7 @@ img { max-width: 100%; }
 .brand-logo { width: 58px; height: 58px; padding: 4px; border-radius: 14px; }
 @media (max-width: 1200px) { .brand-logo { width: 50px; height: 50px; } }
 @media (max-width: 600px)  { .brand-logo { width: 44px; height: 44px; } }
-@media (max-width: 400px)  { .brand-logo { width: 40px; height: 40px; padding: 3px; }
+@media (max-width: 400px)  { .brand-logo { width: 40px; height: 40px; padding: 3px; } }
     
 
 /* ===== Mini galéria a szolgáltatás kártyákon ===== */
@@ -1347,32 +1347,47 @@ img { max-width: 100%; }
 }
 @media (max-width: 400px) { .service-card .mini-gallery { width: 64px; height: 50px; top: 10px; right: 10px; } }
 
-/* ===== Instagram kártya a galéria alatt ===== */
-.insta-cta {
-  display: flex; align-items: center; gap: 1.5rem;
-  max-width: 860px; margin: 3rem auto 0; padding: 1.5rem 2rem;
-  background: #fff; border: 1px solid #e1e6ec; border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(10, 37, 64, .08); text-align: left;
+/* ===== Instagram banner a galéria alatt ===== */
+.insta-banner {
+  display: flex; align-items: center; justify-content: center; gap: 1.25rem;
+  margin-top: 3rem; padding: 3rem 1.5rem; border-radius: 12px;
+  background: linear-gradient(180deg, #031c38 0%, #04264a 100%);
 }
-.insta-icon {
-  flex: none; width: 64px; height: 64px; border-radius: 18px;
+.insta-line {
+  flex: 1; max-width: 230px; height: 4px; border-radius: 2px;
+  background: linear-gradient(90deg, #ffa31a, #f0307a 55%, #a32de6);
+}
+.insta-pill {
+  display: inline-flex; align-items: center; gap: 1rem; max-width: 100%;
+  padding: .55rem .6rem .55rem 1.3rem; border: 3px solid transparent; border-radius: 999px;
+  background: linear-gradient(#031f3d, #031f3d) padding-box, linear-gradient(90deg, #ffa31a, #f0307a 50%, #a32de6) border-box;
+  color: #fff; text-decoration: none;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.insta-pill:hover { transform: translateY(-2px); box-shadow: 0 0 0 5px rgba(240, 48, 122, .2); }
+.insta-pill:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.insta-dash { flex: none; width: 26px; height: 5px; border-radius: 3px; background: linear-gradient(90deg, #ffa31a, #a32de6); }
+.insta-label { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.35rem; line-height: 1.25; }
+.insta-arrow { flex: none; font-size: 1.2rem; }
+.insta-sep { flex: none; width: 2px; height: 42px; background: rgba(140, 120, 255, .45); }
+.insta-ico {
+  flex: none; width: 56px; height: 56px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 2rem;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  color: #fff; font-size: 1.8rem;
+  background: linear-gradient(135deg, #ff9a1f 0%, #f0307a 55%, #b52bd9 100%);
 }
-.insta-text { flex: 1; min-width: 0; }
-.insta-title { margin: 0 0 .3rem; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.15rem; line-height: 1.35; color: var(--primary); }
-.insta-handle { font-size: .95rem; color: var(--gray); }
-.insta-btn {
-  flex: none; display: inline-flex; align-items: center; gap: .6rem;
-  padding: .85rem 1.5rem; border-radius: 4px;
-  background: var(--primary); color: #fff; font-weight: 600; text-decoration: none;
-  transition: background-color .25s ease, transform .25s ease;
-}
-.insta-btn:hover { background: var(--secondary); transform: translateY(-2px); }
 @media (max-width: 700px) {
-  .insta-cta { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; gap: 1rem; }
-  .insta-btn { width: 100%; justify-content: center; }
+  .insta-banner { padding: 2rem 1rem; gap: .75rem; }
+  .insta-line { display: none; }
+  .insta-label { font-size: 1.1rem; }
+  .insta-pill { gap: .75rem; }
+}
+@media (max-width: 480px) {
+  .insta-dash, .insta-arrow { display: none; }
+  .insta-label { font-size: .95rem; }
+  .insta-pill { gap: .6rem; padding-left: 1rem; }
+  .insta-ico { width: 46px; height: 46px; font-size: 1.5rem; }
+  .insta-sep { height: 34px; }
 }
 </style>
   <meta name="theme-color" content="#0a2540">
@@ -1647,16 +1662,16 @@ img { max-width: 100%; }
           <span class="gallery-overlay"><i class="fas fa-search-plus" aria-hidden="true"></i></span>
         </button>
       </div>
-      <div class="insta-cta">
-        <div class="insta-icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
-        <div class="insta-text">
-          <p class="insta-title" data-key="gallery.instagram.text">További tartalmakért tekintse meg Instagram oldalunkat is!</p>
-          <span class="insta-handle">@koroziostop</span>
-        </div>
-        <a href="https://www.instagram.com/koroziostop/" class="insta-btn" target="_blank" rel="noopener">
-          <span data-key="gallery.instagram.button">Kövessen minket</span>
-          <i class="fas fa-arrow-right" aria-hidden="true"></i>
+      <div class="insta-banner">
+        <span class="insta-line" aria-hidden="true"></span>
+        <a class="insta-pill" href="https://www.instagram.com/koroziostop/" target="_blank" rel="noopener" aria-label="Instagram: @koroziostop">
+          <span class="insta-dash" aria-hidden="true"></span>
+          <span class="insta-label" data-key="gallery.instagram.text">További exkluzív tartalmak</span>
+          <i class="fas fa-arrow-right insta-arrow" aria-hidden="true"></i>
+          <span class="insta-sep" aria-hidden="true"></span>
+          <span class="insta-ico"><i class="fab fa-instagram" aria-hidden="true"></i></span>
         </a>
+        <span class="insta-line" aria-hidden="true"></span>
       </div>
     </div>
   </section>
@@ -1802,8 +1817,7 @@ img { max-width: 100%; }
       
       // Footer
       'brand.sub': 'Professzionális fémfelület-tisztítás',
-      'gallery.instagram.text': 'További tartalmakért tekintse meg Instagram oldalunkat is!',
-      'gallery.instagram.button': 'Kövessen minket',
+      'gallery.instagram.text': 'További exkluzív tartalmak',
       'footer.contact': 'Elérhetőségek',
       'footer.address': 'Székelyudvarhely, Strada Bradului',
       'footer.map': 'Megnyitás a Google Térképen',
@@ -1877,8 +1891,7 @@ img { max-width: 100%; }
       
       // Footer
       'brand.sub': 'Curățare profesională a suprafețelor metalice',
-      'gallery.instagram.text': 'Pentru mai multe conținuturi, vizitați și pagina noastră de Instagram!',
-      'gallery.instagram.button': 'Urmăriți-ne',
+      'gallery.instagram.text': 'Mai multe conținuturi exclusive',
       'footer.contact': 'Date de contact',
       'footer.address': 'Odorheiu Secuiesc, Strada Bradului',
       'footer.map': 'Deschide în Google Maps',

@@ -1347,18 +1347,33 @@ img { max-width: 100%; }
 }
 @media (max-width: 400px) { .service-card .mini-gallery { width: 64px; height: 50px; top: 10px; right: 10px; } }
 
-/* ===== Instagram felirat a galéria alatt ===== */
-.insta-cta { text-align: center; margin-top: 2.5rem; }
-.insta-cta p { font-size: 1.1rem; color: var(--dark); margin-bottom: 1rem; }
-.insta-btn {
-  display: inline-flex; align-items: center; gap: .6rem;
-  padding: .8rem 1.6rem; border: 2px solid var(--primary); border-radius: 4px;
-  color: var(--primary); font-weight: 600; text-decoration: none;
-  transition: background-color .25s ease, color .25s ease;
+/* ===== Instagram kártya a galéria alatt ===== */
+.insta-cta {
+  display: flex; align-items: center; gap: 1.5rem;
+  max-width: 860px; margin: 3rem auto 0; padding: 1.5rem 2rem;
+  background: #fff; border: 1px solid #e1e6ec; border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(10, 37, 64, .08); text-align: left;
 }
-.insta-btn i { font-size: 1.3rem; color: #e1306c; transition: color .25s ease; }
-.insta-btn:hover { background-color: var(--primary); color: #fff; }
-.insta-btn:hover i { color: #fff; }
+.insta-icon {
+  flex: none; width: 64px; height: 64px; border-radius: 18px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 2rem;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+.insta-text { flex: 1; min-width: 0; }
+.insta-title { margin: 0 0 .3rem; font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.15rem; line-height: 1.35; color: var(--primary); }
+.insta-handle { font-size: .95rem; color: var(--gray); }
+.insta-btn {
+  flex: none; display: inline-flex; align-items: center; gap: .6rem;
+  padding: .85rem 1.5rem; border-radius: 4px;
+  background: var(--primary); color: #fff; font-weight: 600; text-decoration: none;
+  transition: background-color .25s ease, transform .25s ease;
+}
+.insta-btn:hover { background: var(--secondary); transform: translateY(-2px); }
+@media (max-width: 700px) {
+  .insta-cta { flex-direction: column; text-align: center; padding: 1.5rem 1.25rem; gap: 1rem; }
+  .insta-btn { width: 100%; justify-content: center; }
+}
 </style>
   <meta name="theme-color" content="#0a2540">
   <meta property="og:type" content="website">
@@ -1633,10 +1648,14 @@ img { max-width: 100%; }
         </button>
       </div>
       <div class="insta-cta">
-        <p data-key="gallery.instagram.text">További tartalmakért tekintse meg Instagram oldalunkat is!</p>
+        <div class="insta-icon"><i class="fab fa-instagram" aria-hidden="true"></i></div>
+        <div class="insta-text">
+          <p class="insta-title" data-key="gallery.instagram.text">További tartalmakért tekintse meg Instagram oldalunkat is!</p>
+          <span class="insta-handle">@koroziostop</span>
+        </div>
         <a href="https://www.instagram.com/koroziostop/" class="insta-btn" target="_blank" rel="noopener">
-          <i class="fab fa-instagram" aria-hidden="true"></i>
-          <span data-key="gallery.instagram.button">Kövessen minket Instagramon</span>
+          <span data-key="gallery.instagram.button">Kövessen minket</span>
+          <i class="fas fa-arrow-right" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -1784,7 +1803,7 @@ img { max-width: 100%; }
       // Footer
       'brand.sub': 'Professzionális fémfelület-tisztítás',
       'gallery.instagram.text': 'További tartalmakért tekintse meg Instagram oldalunkat is!',
-      'gallery.instagram.button': 'Kövessen minket Instagramon',
+      'gallery.instagram.button': 'Kövessen minket',
       'footer.contact': 'Elérhetőségek',
       'footer.address': 'Székelyudvarhely, Strada Bradului',
       'footer.map': 'Megnyitás a Google Térképen',
@@ -1859,7 +1878,7 @@ img { max-width: 100%; }
       // Footer
       'brand.sub': 'Curățare profesională a suprafețelor metalice',
       'gallery.instagram.text': 'Pentru mai multe conținuturi, vizitați și pagina noastră de Instagram!',
-      'gallery.instagram.button': 'Urmăriți-ne pe Instagram',
+      'gallery.instagram.button': 'Urmăriți-ne',
       'footer.contact': 'Date de contact',
       'footer.address': 'Odorheiu Secuiesc, Strada Bradului',
       'footer.map': 'Deschide în Google Maps',

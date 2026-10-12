@@ -1350,7 +1350,7 @@ img { max-width: 100%; }
 /* ===== Instagram banner a galéria alatt ===== */
 .insta-banner {
   display: flex; align-items: center; justify-content: center; gap: 1.25rem;
-  margin-top: 3rem; padding: 3rem 1.5rem; border-radius: 12px;
+  margin-top: 2.5rem; padding: 1.1rem 1.5rem; border-radius: 12px;
   background: linear-gradient(180deg, #031c38 0%, #04264a 100%);
 }
 .insta-line {
@@ -1359,7 +1359,7 @@ img { max-width: 100%; }
 }
 .insta-pill {
   display: inline-flex; align-items: center; gap: 1rem; max-width: 100%;
-  padding: .55rem .6rem .55rem 1.3rem; border: 3px solid transparent; border-radius: 999px;
+  padding: 0 0 0 1.3rem; border: 3px solid transparent; border-radius: 999px;
   background: linear-gradient(#031f3d, #031f3d) padding-box, linear-gradient(90deg, #ffa31a, #f0307a 50%, #a32de6) border-box;
   color: #fff; text-decoration: none;
   transition: transform .25s ease, box-shadow .25s ease;
@@ -1369,15 +1369,15 @@ img { max-width: 100%; }
 .insta-dash { flex: none; width: 26px; height: 5px; border-radius: 3px; background: linear-gradient(90deg, #ffa31a, #a32de6); }
 .insta-label { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.35rem; line-height: 1.25; }
 .insta-arrow { flex: none; font-size: 1.2rem; }
-.insta-sep { flex: none; width: 2px; height: 42px; background: rgba(140, 120, 255, .45); }
+.insta-sep { flex: none; align-self: stretch; width: 2px; background: rgba(140, 120, 255, .45); }
 .insta-ico {
-  flex: none; width: 56px; height: 56px; border-radius: 50%;
+  flex: none; width: 40px; height: 40px; margin: .3rem .35rem .3rem 0; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 1.8rem;
+  color: #fff; font-size: 1.3rem;
   background: linear-gradient(135deg, #ff9a1f 0%, #f0307a 55%, #b52bd9 100%);
 }
 @media (max-width: 700px) {
-  .insta-banner { padding: 2rem 1rem; gap: .75rem; }
+  .insta-banner { padding: 1rem; gap: .75rem; }
   .insta-line { display: none; }
   .insta-label { font-size: 1.1rem; }
   .insta-pill { gap: .75rem; }
@@ -1386,8 +1386,7 @@ img { max-width: 100%; }
   .insta-dash, .insta-arrow { display: none; }
   .insta-label { font-size: .95rem; }
   .insta-pill { gap: .6rem; padding-left: 1rem; }
-  .insta-ico { width: 46px; height: 46px; font-size: 1.5rem; }
-  .insta-sep { height: 34px; }
+  .insta-ico { width: 36px; height: 36px; font-size: 1.2rem; }
 }
 </style>
   <meta name="theme-color" content="#0a2540">

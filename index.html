@@ -1388,7 +1388,37 @@ img { max-width: 100%; }
   .insta-pill { gap: .6rem; padding-left: 1rem; }
   .insta-ico { width: 36px; height: 36px; font-size: 1.2rem; }
 }
-</style>
+
+    /* ADATVÉDELMI TÁJÉKOZTATÓ (ablak + lábléc link) */
+    .privacy-link {
+      background: none; border: 0; padding: 0; margin: 0;
+      font: inherit; color: inherit; cursor: pointer;
+      text-decoration: underline; text-underline-offset: 3px;
+    }
+    .privacy-link:hover, .privacy-link:focus-visible { color: var(--white); }
+    .privacy-dialog {
+      border: none; border-radius: 12px; padding: 0;
+      width: calc(100% - 2rem); max-width: 720px; max-height: 85vh;
+      background: var(--white); color: var(--dark);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+    .privacy-dialog::backdrop { background: rgba(10, 37, 64, 0.75); }
+    .privacy-inner { position: relative; padding: 2rem; max-height: 85vh; overflow-y: auto; }
+    .privacy-inner h2 {
+      font-size: 1.5rem; color: var(--primary);
+      margin: 0 2.5rem 1.25rem 0; line-height: 1.3;
+    }
+    .privacy-inner p { margin-bottom: 1rem; font-size: 0.975rem; line-height: 1.65; }
+    .privacy-inner a { color: var(--secondary); overflow-wrap: anywhere; }
+    .privacy-close {
+      position: absolute; top: 0.75rem; right: 0.75rem;
+      width: 2.5rem; height: 2.5rem; border: 0; border-radius: 50%;
+      background: var(--light-gray); color: var(--dark);
+      font-size: 1.1rem; cursor: pointer;
+    }
+    .privacy-close:hover, .privacy-close:focus-visible { background: var(--secondary); color: var(--white); }
+    @media (max-width: 600px) { .privacy-inner { padding: 1.5rem 1.25rem; } }
+  </style>
   <meta name="theme-color" content="#0a2540">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="hu_HU">
@@ -1723,9 +1753,19 @@ img { max-width: 100%; }
       </div>
     </div>
     <div class="copyright">
-      <p>© <span id="year">2026</span> Korozio Stop Srl.</p>
+      <p>© <span id="year">2026</span> Korozio Stop Srl. · <button type="button" class="privacy-link" id="privacy-open" data-key="footer.privacy" aria-haspopup="dialog">Adatvédelmi tájékoztató</button></p>
     </div>
   </footer>
+
+  <!-- Adatvédelmi tájékoztató / Informare privind protecția datelor -->
+  <dialog class="privacy-dialog" id="privacy-dialog" aria-labelledby="privacy-title">
+    <div class="privacy-inner">
+      <button type="button" class="privacy-close" id="privacy-close" aria-label="Bezárás" data-aria-key="privacy.close"><i class="fas fa-times" aria-hidden="true"></i></button>
+      <h2 id="privacy-title" data-key="privacy.title">Adatvédelmi tájékoztató</h2>
+      <p><strong data-key="privacy.controller.label">Adatkezelő:</strong> <span data-key="privacy.controller.text">Korozio Stop Srl., Odorheiu Secuiesc, Strada Bradului.</span> E-mail: <a href="mailto:koroziostop@gmail.com">koroziostop@gmail.com</a>, tel.: <a href="tel:+40745967960">+40 745 967 960</a>.</p>
+      <p><strong data-key="privacy.analytics.label">Webanalitika.</strong> <span data-key="privacy.analytics.text">Weboldalunk a Cloudflare Web Analytics szolgáltatását használja a látogatottság általános mérésére (pl. oldalmegtekintések száma, országok, böngészőtípus, eszköztípus). A szolgáltatás sütiket nem használ, és a látogatókat nem követi nyomon az oldalak között. Egyéni azonosításra nem alkalmas, összesített statisztikákat készítünk belőle. Jogalap: jogos érdek (GDPR 6. cikk (1) f)), a weboldal működésének és használatának javítása.</span> <span data-key="privacy.details">Részletek:</span> <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">https://www.cloudflare.com/privacypolicy/</a></p>
+    </div>
+  </dialog>
 
   <a class="fab-call" href="tel:+40745967960" aria-label="Hívás"><i class="fas fa-phone" aria-hidden="true"></i></a>
 
@@ -1821,6 +1861,14 @@ img { max-width: 100%; }
       'footer.contact': 'Elérhetőségek',
       'footer.address': 'Székelyudvarhely, Strada Bradului',
       'footer.map': 'Megnyitás a Google Térképen',
+      'footer.privacy': 'Adatvédelmi tájékoztató',
+      'privacy.close': 'Bezárás',
+      'privacy.title': 'Adatvédelmi tájékoztató',
+      'privacy.controller.label': 'Adatkezelő:',
+      'privacy.controller.text': 'Korozio Stop Srl., Odorheiu Secuiesc, Strada Bradului.',
+      'privacy.analytics.label': 'Webanalitika.',
+      'privacy.analytics.text': 'Weboldalunk a Cloudflare Web Analytics szolgáltatását használja a látogatottság általános mérésére (pl. oldalmegtekintések száma, országok, böngészőtípus, eszköztípus). A szolgáltatás sütiket nem használ, és a látogatókat nem követi nyomon az oldalak között. Egyéni azonosításra nem alkalmas, összesített statisztikákat készítünk belőle. Jogalap: jogos érdek (GDPR 6. cikk (1) f)), a weboldal működésének és használatának javítása.',
+      'privacy.details': 'Részletek:',
       'services.extra.title': 'Vizes homokszórás',
       'services.extra.description': 'Terepmunka esetén jelentősen csökkenthetjük a munkavégzés során keletkező felszálló por mennyiségét a vizes homokszóró berendezésünkkel.',
       'canvas.instruction.touch': 'Húzza végig az ujját a képen, hogy lássa a tisztítás eredményét!',
@@ -1895,6 +1943,14 @@ img { max-width: 100%; }
       'footer.contact': 'Date de contact',
       'footer.address': 'Odorheiu Secuiesc, Strada Bradului',
       'footer.map': 'Deschide în Google Maps',
+      'footer.privacy': 'Informare privind protecția datelor',
+      'privacy.close': 'Închide',
+      'privacy.title': 'Informare privind protecția datelor',
+      'privacy.controller.label': 'Operator de date:',
+      'privacy.controller.text': 'Korozio Stop Srl., Odorheiu Secuiesc, Strada Bradului.',
+      'privacy.analytics.label': 'Analiză web.',
+      'privacy.analytics.text': 'Site-ul nostru utilizează serviciul Cloudflare Web Analytics pentru măsurarea generală a numărului de vizitatori (de ex. numărul de vizualizări de pagină, țările, tipul de browser, tipul de dispozitiv). Serviciul nu utilizează cookie-uri și nu urmărește vizitatorii de la un site la altul. Nu permite identificarea individuală; din datele colectate realizăm doar statistici agregate. Temei juridic: interes legitim (art. 6 alin. (1) lit. f) din GDPR), îmbunătățirea funcționării și utilizării site-ului.',
+      'privacy.details': 'Detalii:',
       'canvas.reset': 'Resetare',
       'canvas.instruction.touch': 'Treceți degetul peste imagine pentru a vedea rezultatul curățării!',
       'canvas.label': 'Imagine înainte-după',
@@ -2054,6 +2110,22 @@ img { max-width: 100%; }
     if (Math.abs(dx) > 50) changeImage(dx < 0 ? 1 : -1);
     touchX = null;
   });
+
+  // Adatvédelmi tájékoztató ablak
+  (function () {
+    const dlg = document.getElementById('privacy-dialog');
+    const openBtn = document.getElementById('privacy-open');
+    const closeBtn = document.getElementById('privacy-close');
+    if (!dlg || !openBtn) return;
+    openBtn.addEventListener('click', () => {
+      if (typeof dlg.showModal === 'function') { dlg.showModal(); document.body.style.overflow = 'hidden'; }
+      else dlg.setAttribute('open', '');
+    });
+    const close = () => { dlg.close(); };
+    closeBtn.addEventListener('click', close);
+    dlg.addEventListener('click', e => { if (e.target === dlg) close(); }); // háttérre kattintás
+    dlg.addEventListener('close', () => { document.body.style.overflow = ''; openBtn.focus(); });
+  })();
 
   // Elmentett nyelv visszaállítása (alapértelmezett: magyar)
   let savedLang = null;
